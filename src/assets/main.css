@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Source+Sans+Pro:wght@400;600&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  font: 48px/56px "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+h2 {
+  font: 42px/52px "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+h3 {
+  font: 36px/42px "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+h4 {
+  font: 32px/38px "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+h5 {
+  font: 26px/32px "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+h6 {
+  font: 24px/32px "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+p, a, span, label, button, li {
+  font: 18px/26px "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: black;
+  font-weight: 600;
+}
+
+.page-wrapper {
+  padding: 32px 0;
+}
+
+.inner-wrapper {
+  padding: 72px 24px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.inner-wrapper h2 {
+  margin-bottom: 12px;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header #socials-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header #socials-header a {
+  display: block;
+  background: white;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 8px;
+}
+
+header #socials-header a svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+header #socials-header a.fb-soc {
+  background: #4867AA;
+}
+
+header #socials-header a.tw-soc {
+  background: #00A2F3;
+}
+
+header #socials-header a.li-soc {
+  background: #0077B5;
+}
+
+header #socials-header a:first-child {
+  margin-left: 0;
+}
+
+header #nath-title {
+  font: 24px/32px "Raleway", sans-serif;
+  font-weight: 800;
+  color: #3e3e3e;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .nav-header {
+  position: relative;
+}
+
+header .nav-header .notif {
+  background: white;
+  font: 16px/20px "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  padding: 12px 24px;
+  border-radius: 30px;
+  bottom: -64px;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  -webkit-animation: popNotifTop 2s forwards ease-in-out;
+          animation: popNotifTop 2s forwards ease-in-out;
+  opacity: 0;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+  pointer-events: none;
+}
+
+header .nav-header .notif.inactive {
+  -webkit-animation: none;
+          animation: none;
+}
+
+header .nav-header .notif:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-bottom: 10px solid white;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  top: -8px;
+  left: 20px;
+}
+
+header .nav-header .burg {
+  width: 42px;
+  height: 28px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+header .nav-header .burg i {
+  width: 42px;
+  height: 4px;
+  background: white;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+header .nav-header .burg i:first-child {
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+header .nav-header .burg i:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+header .nav-header .burg i:last-child {
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+header .nav-header .nav-wrapper {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom-right-radius: 100%;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  background: #FE7F4A;
+  top: -15px;
+  left: -24px;
+  padding: 0;
+  pointer-events: none;
+}
+
+header .nav-header .nav-wrapper a {
+  display: block;
+  font: 32px/42px "Source Sans Pro", sans-serif;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 12px;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+header .nav-header .nav-wrapper a:last-child {
+  margin-bottom: 0;
+}
+
+header .nav-header .nav-wrapper.morning {
+  background: #65C8B9;
+}
+
+header .nav-header .nav-wrapper.morning a.active {
+  color: #319183;
+}
+
+header .nav-header .nav-wrapper.afternoon {
+  background: #FE7F4A;
+}
+
+header .nav-header .nav-wrapper.afternoon a.active {
+  color: #c96338;
+}
+
+header .nav-header .nav-wrapper.evening {
+  background: #113363;
+}
+
+header .nav-header .nav-wrapper.evening a.active {
+  color: #0f3e80;
+}
+
+header .nav-header.active .burg i:first-child {
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+header .nav-header.active .burg i:nth-child(2) {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+header .nav-header.active .burg i:last-child {
+  left: 32px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+header .nav-header.active .nav-wrapper {
+  width: 420px;
+  height: 400px;
+  padding: 86px 24px 0 72px;
+  pointer-events: all;
+}
+
+header .nav-header.active .nav-wrapper a {
+  opacity: 1;
+}
+
+header .nav-header.active .nav-wrapper a:first-child {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+header .nav-header.active .nav-wrapper a:nth-child(2) {
+  -webkit-transition-delay: 350ms;
+          transition-delay: 350ms;
+}
+
+header .nav-header.active .nav-wrapper a:last-child {
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
+}
+
+.hero-start {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.hero-start .hero-bg {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.hero-start .hero-bg img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero-start .hero-content {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+  z-index: 2;
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-start .hero-content .hero-content-wrap {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 42px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  margin-top: -60px;
+}
+
+.hero-start .hero-content .hero-content-wrap .pic-wrap {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-start .hero-content .hero-content-wrap .pic-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero-start .hero-content .hero-content-wrap h2 {
+  margin-bottom: 20px;
+}
+
+.hero-start .hero-content .hero-content-wrap h6 {
+  margin-bottom: 12px;
+}
+
+.sec-skills .skills-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 42px 0;
+}
+
+.sec-skills .skills-list .skill-item {
+  width: 20%;
+  padding: 0 12px;
+  margin-bottom: 56px;
+}
+
+.sec-skills .skills-list .skill-item .inner-skill-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.sec-skills .skills-list .skill-item .inner-skill-wrap img {
+  display: block;
+  margin: 0 auto 10px;
+  width: 82px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.sec-skills .skills-list .skill-item .inner-skill-wrap h3 {
+  font: 26px/30px "Raleway", sans-serif;
+}
+
+@-webkit-keyframes popNotifTop {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    opacity: 1;
+  }
+  17% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes popNotifTop {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    opacity: 1;
+  }
+  17% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
