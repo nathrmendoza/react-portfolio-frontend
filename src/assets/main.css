@@ -307,27 +307,27 @@ header .nav-header .nav-wrapper a:last-child {
 }
 
 header .nav-header .nav-wrapper.morning {
-  background: #65C8B9;
+  background: #244e66;
 }
 
 header .nav-header .nav-wrapper.morning a.active {
-  color: #319183;
+  color: #4195c4;
 }
 
 header .nav-header .nav-wrapper.afternoon {
-  background: #FE7F4A;
+  background: #45220F;
 }
 
 header .nav-header .nav-wrapper.afternoon a.active {
-  color: #c96338;
+  color: #a35327;
 }
 
 header .nav-header .nav-wrapper.evening {
-  background: #113363;
+  background: #00070f;
 }
 
 header .nav-header .nav-wrapper.evening a.active {
-  color: #0f3e80;
+  color: #173f6e;
 }
 
 header .nav-header.active .burg i:first-child {

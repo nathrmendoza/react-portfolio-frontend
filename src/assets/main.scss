@@ -102,12 +102,12 @@ header{width: 100%; position: absolute; top: 0; left: 0; z-index: 99; background
       a{display: block; font: 32px/42px $fontmain; text-decoration: none; color: white; margin-bottom: 12px; opacity: 0; transition: opacity 300ms ease-in-out; 
         &:last-child{margin-bottom: 0;}
       }
-      &.morning {background: #65C8B9;
-        a.active{color: #319183;}}
-      &.afternoon {background: #FE7F4A;
-        a.active{color: #c96338;}}
-      &.evening {background: #113363;
-        a.active{color: #0f3e80;}}
+      &.morning {background: #244e66;
+        a.active{color: #4195c4;}}
+      &.afternoon {background: #45220F;
+        a.active{color: #a35327;}}
+      &.evening {background: #00070f;
+        a.active{color: #173f6e;}}
     }
 
     &.active {

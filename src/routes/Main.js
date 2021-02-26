@@ -44,11 +44,11 @@ const Main = ({tch}) => {
     //theme color for page
     const pageColor = () => {
         if (tch >= 0 && tch < 12) 
-            return {backgroundColor : "#21062F", color : "white"};
+            return {backgroundColor : "#244e66", color : "white"};
         else if (tch >= 12 && tch < 18)
-            return {backgroundColor : "#2E112D", color : "white"};
+            return {backgroundColor : "#45220F", color : "white"};
         else
-            return {backgroundColor : "#171F2C", color : "white"};
+            return {backgroundColor : "#00070f", color : "white"};
     }
 
     //render
@@ -56,7 +56,7 @@ const Main = ({tch}) => {
         <main>
             <section className="hero-start">
 
-                <Parallax bgImage={`https://nath-port-strapi.herokuapp.com${backgroundToUse}`} strength={250}>
+                <Parallax bgImage={`https://nath-port-strapi.herokuapp.com${backgroundToUse}`} strength={200}>
                     <article className="hero-content">
                         <div className="hero-content-wrap">
                             <div className="pic-wrap"><img src={process.env.PUBLIC_URL + 'images/pic-of-me.jpg'} alt="test"/></div>
