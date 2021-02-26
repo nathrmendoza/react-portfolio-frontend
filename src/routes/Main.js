@@ -13,7 +13,7 @@ const Main = ({tch}) => {
     const [skillsData, skillsUpdate] = useState([]);
 
     useEffect (() => {
-        let time = 1;
+        let time = new Date().getHours();
 
         //background
         axios.get(`https://nath-port-strapi.herokuapp.com/main-page`).then(res => {
