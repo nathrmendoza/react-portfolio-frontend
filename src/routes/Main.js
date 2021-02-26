@@ -9,24 +9,24 @@ import Skills from '../components/Skills'
 
 const Main = ({tch}) => {
     
-    // const [backgroundToUse, backgroundUpdate] = useState([]);
+    const [backgroundToUse, backgroundUpdate] = useState([]);
     // const [skillsData, skillsUpdate] = useState([]);
 
     useEffect (() => {
         let time = new Date().getHours();
 
         //background
-        // axios.get(`http://localhost:1337/main-page`).then(res => {
-        //     if (time >= 0 && time < 12) {
-        //         backgroundUpdate(res.data.morningbg.url);
-        //     }else if (time >= 12 && time < 18) {
-        //         backgroundUpdate(res.data.afternoonbg.url);
-        //     }else {
-        //         backgroundUpdate(res.data.eveningbg.url);
-        //     }
-        // });
+        axios.get(`https://nath-port-strapi.herokuapp.com/main-page`).then(res => {
+            if (time >= 0 && time < 12) {
+                backgroundUpdate(res.data.morningbg.url);
+            }else if (time >= 12 && time < 18) {
+                backgroundUpdate(res.data.afternoonbg.url);
+            }else {
+                backgroundUpdate(res.data.eveningbg.url);
+            }
+        });
         
-        // //skills data
+        //skills data
         // axios.get(`http://localhost:1337/skills`).then(res => skillsUpdate(res.data));
 
     }, []);
@@ -56,7 +56,7 @@ const Main = ({tch}) => {
         <main>
             <section className="hero-start">
 
-                {/* <Parallax bgImage={`http://localhost:1337${backgroundToUse}`} strength={250}>
+                <Parallax bgImage={`http://localhost:1337${backgroundToUse}`} strength={250}>
                     <article className="hero-content">
                         <div className="hero-content-wrap">
                             <div className="pic-wrap"><img src={process.env.PUBLIC_URL + 'images/pic-of-me.jpg'} alt="test"/></div>
@@ -66,16 +66,8 @@ const Main = ({tch}) => {
                                 out my <Link to="/projects">Projects</Link> page to see what I've accomplished through the length of my field.</p>
                         </div>
                     </article>
-                </Parallax> */}
-                    <article className="hero-content">
-                        <div className="hero-content-wrap">
-                            <div className="pic-wrap"><img src={process.env.PUBLIC_URL + 'images/pic-of-me.jpg'} alt="test"/></div>
-                            <h2>{greetMessage()}</h2>
-                            <h6>I'm Nath, A front-end web developer</h6>
-                            <p>Heya, I see you're visiting my portfolio. Do check around this page to see the summary of who I am. Also, don't forget to check 
-                                out my <Link to="/projects">Projects</Link> page to see what I've accomplished through the length of my field.</p>
-                        </div>
-                    </article>
+                </Parallax>
+                
             </section>
             <section className="page-wrapper" style={pageColor()}>
                 <Background />
