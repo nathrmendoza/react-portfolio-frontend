@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 function App() {
   //get time to set color theme
-  let time = new Date().getHours();
+  let time = 1;
 
   return (
     <>

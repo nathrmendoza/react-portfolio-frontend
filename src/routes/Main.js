@@ -10,10 +10,10 @@ import Skills from '../components/Skills'
 const Main = ({tch}) => {
     
     const [backgroundToUse, backgroundUpdate] = useState([]);
-    // const [skillsData, skillsUpdate] = useState([]);
+    const [skillsData, skillsUpdate] = useState([]);
 
     useEffect (() => {
-        let time = new Date().getHours();
+        let time = 1;
 
         //background
         axios.get(`https://nath-port-strapi.herokuapp.com/main-page`).then(res => {
@@ -27,7 +27,7 @@ const Main = ({tch}) => {
         });
         
         //skills data
-        // axios.get(`http://localhost:1337/skills`).then(res => skillsUpdate(res.data));
+        axios.get(`https://nath-port-strapi.herokuapp.com/skills`).then(res => skillsUpdate(res.data));
 
     }, []);
 
@@ -46,7 +46,7 @@ const Main = ({tch}) => {
         if (tch >= 0 && tch < 12) 
             return {backgroundColor : "#244e66", color : "white"};
         else if (tch >= 12 && tch < 18)
-            return {backgroundColor : "#45220F", color : "white"};
+            return {backgroundColor : "#290012", color : "white"};
         else
             return {backgroundColor : "#00070f", color : "white"};
     }
@@ -67,11 +67,14 @@ const Main = ({tch}) => {
                         </div>
                     </article>
                 </Parallax>
-
             </section>
+
             <section className="page-wrapper" style={pageColor()}>
                 <Background />
-                {/* <Skills skills_data={skillsData}/> */}
+                
+                <Skills skills_data={skillsData}/>
+                
+                <Parallax className="section-break" bgImage={`https://nath-port-strapi.herokuapp.com${backgroundToUse}`} strength={500}/>
             </section>
         </main>
     )

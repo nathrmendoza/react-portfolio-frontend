@@ -67,6 +67,7 @@ a{color: black; font-weight: 600;}
 .inner-wrapper {padding: 72px 24px; margin: 0 auto; width: 100%; max-width: 1024px;
   h2 {margin-bottom: 12px;}}
 
+.section-break {width: 100%; height: 200px; display: block;}
 
 //START
 //HEADER
@@ -82,7 +83,7 @@ header{width: 100%; position: absolute; top: 0; left: 0; z-index: 99; background
     }
   }
   
-  #nath-title {font: 24px/32px $fontheading; font-weight: 800; color: #3e3e3e;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+  #nath-title {font: 24px/32px $fontheading; font-weight: 800; color:white;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
   .nav-header { position: relative;
     .notif {background: white; font: 16px/20px $fontmain; font-weight: 400; padding: 12px 24px; border-radius: 30px; bottom: -64px; position: absolute; width: 200px; text-align: center;
@@ -104,8 +105,8 @@ header{width: 100%; position: absolute; top: 0; left: 0; z-index: 99; background
       }
       &.morning {background: #244e66;
         a.active{color: #4195c4;}}
-      &.afternoon {background: #45220F;
-        a.active{color: #a35327;}}
+      &.afternoon {background: #EC7233;
+        a.active{color: #D95629;}}
       &.evening {background: #00070f;
         a.active{color: #173f6e;}}
     }
@@ -153,7 +154,7 @@ header{width: 100%; position: absolute; top: 0; left: 0; z-index: 99; background
   .skills-list {width: 100%; display: flex; align-items: stretch; justify-content: flex-start; flex-wrap: wrap; padding: 42px 0;
     .skill-item{width: 20%; padding: 0 12px; margin-bottom: 56px;
       .inner-skill-wrap {width: 100%; text-align: center;
-        img{display: block; margin: 0 auto 10px; width: 82px; height: auto; opacity: 0.8;}
+        img{display: block; margin: 0 auto 10px; width: auto; height: 82px; opacity: 0.8; filter: invert(1);}
         h3 {font: 26px/30px $fontheading;}
       }
     }

@@ -109,6 +109,12 @@ a {
   margin-bottom: 12px;
 }
 
+.section-break {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
 header {
   width: 100%;
   position: absolute;
@@ -185,7 +191,7 @@ header #socials-header a:first-child {
 header #nath-title {
   font: 24px/32px "Raleway", sans-serif;
   font-weight: 800;
-  color: #3e3e3e;
+  color: white;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -315,11 +321,11 @@ header .nav-header .nav-wrapper.morning a.active {
 }
 
 header .nav-header .nav-wrapper.afternoon {
-  background: #45220F;
+  background: #EC7233;
 }
 
 header .nav-header .nav-wrapper.afternoon a.active {
-  color: #a35327;
+  color: #D95629;
 }
 
 header .nav-header .nav-wrapper.evening {
@@ -494,9 +500,11 @@ header .nav-header.active .nav-wrapper a:last-child {
 .sec-skills .skills-list .skill-item .inner-skill-wrap img {
   display: block;
   margin: 0 auto 10px;
-  width: 82px;
-  height: auto;
+  width: auto;
+  height: 82px;
   opacity: 0.8;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .sec-skills .skills-list .skill-item .inner-skill-wrap h3 {

@@ -4,7 +4,7 @@ import Socials from './Socials';
 const Header = ({tch}) => {
 
     const getColor = () => {
-        if (tch >= 0 && tch < 18) 
+        if (tch >= 0 && tch < 12) 
             return "#3e3e3e";
         else
             return "#ffffff";
