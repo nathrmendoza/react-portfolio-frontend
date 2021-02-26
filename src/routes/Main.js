@@ -56,7 +56,7 @@ const Main = ({tch}) => {
         <main>
             <section className="hero-start">
 
-                <Parallax bgImage={`https://nath-port-strapi.herokuapp.com/${backgroundToUse}`} strength={250}>
+                <Parallax bgImage={`https://nath-port-strapi.herokuapp.com${backgroundToUse}`} strength={250}>
                     <article className="hero-content">
                         <div className="hero-content-wrap">
                             <div className="pic-wrap"><img src={process.env.PUBLIC_URL + 'images/pic-of-me.jpg'} alt="test"/></div>
