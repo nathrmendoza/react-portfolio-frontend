@@ -329,11 +329,11 @@ header .nav-header .nav-wrapper.afternoon a.active {
 }
 
 header .nav-header .nav-wrapper.evening {
-  background: #00070f;
+  background: #172C2F;
 }
 
 header .nav-header .nav-wrapper.evening a.active {
-  color: #173f6e;
+  color: #183034;
 }
 
 header .nav-header.active .burg i:first-child {

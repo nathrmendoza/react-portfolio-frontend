@@ -48,7 +48,7 @@ const Main = ({tch}) => {
         else if (tch >= 12 && tch < 18)
             return {backgroundColor : "#290012", color : "white"};
         else
-            return {backgroundColor : "#00070f", color : "white"};
+            return {backgroundColor : "#09141A", color : "white"};
     }
 
     //render
